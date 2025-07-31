@@ -1,0 +1,73 @@
+📝 Customer Segmentation Using Clustering - Detailed Report
+📌 Objective
+The objective of this project is to segment customers into distinct groups based on their Annual Income and Spending Score using unsupervised learning techniques. This segmentation can help businesses in personalized marketing, product recommendation, and customer relationship management.
+
+📊 Dataset Overview
+Dataset Used: Mall Customer Dataset (sourced from Kaggle)
+
+Attributes Selected for Clustering:
+
+Annual Income (k$)
+
+Spending Score (1-100)
+
+The dataset contains demographic and behavioral attributes of mall customers, but we focused on income and spending score for effective segmentation.
+
+⚙️ Preprocessing
+Before applying clustering algorithms:
+
+Missing Values: The dataset was clean with no missing values.
+
+Feature Selection: We selected only the two numerical columns most relevant for segmentation.
+
+Scaling: Data was standardized using StandardScaler from Scikit-learn to bring both features to a similar scale. This is crucial for clustering as it relies on distance metrics.
+
+🧠 Clustering Algorithms Applied
+1. K-Means Clustering
+The Elbow Method was used to determine the optimal number of clusters by plotting inertia vs. cluster count.
+
+The optimal number of clusters (K) was determined to be 5.
+
+K-Means was then applied, and customers were assigned to one of the five clusters.
+
+🔍 Cluster Analysis
+After clustering, we calculated the mean Annual Income and Spending Score for each group.
+
+These statistics helped interpret customer behavior in each segment, such as:
+
+High income, high spenders
+
+Low income, high spenders (potential impulsive buyers)
+
+High income, low spenders (frugal customers)
+
+Medium income, average spenders, etc.
+
+2. DBSCAN (Bonus)
+We also experimented with DBSCAN, a density-based clustering algorithm.
+
+DBSCAN doesn’t require the number of clusters to be specified in advance.
+
+It identifies core samples, border points, and noise (outliers).
+
+DBSCAN was able to detect smaller and irregularly shaped groups but was sensitive to parameter tuning (eps and min_samples).
+
+📈 Visualization
+We visualized the customer clusters using 2D scatter plots:
+
+K-Means Clusters: Color-coded segments clearly showed separated groups.
+
+DBSCAN Clusters: Revealed differently shaped clusters and potential noise points that K-Means could not handle effectively.
+
+📊 Average Spending Per Cluster
+We analyzed the average Annual Income and Spending Score per K-Means cluster to gain business insights:
+
+Clusters with high spending but low income could be targeted with budget-friendly promotions.
+
+Clusters with high income and high spending could be targeted with premium products and loyalty programs.
+
+✅ Conclusion
+This project successfully demonstrates the application of unsupervised machine learning techniques to perform customer segmentation. By using K-Means and DBSCAN, we explored different perspectives of grouping customers.
+
+Such clustering provides businesses with a strategic advantage in understanding customer behavior and implementing data-driven marketing strategies. Additionally, comparing different clustering methods enhanced our understanding of model selection and evaluation in unsupervised learning tasks.
+
