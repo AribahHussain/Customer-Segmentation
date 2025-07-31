@@ -1,0 +1,5 @@
+In this task, we analyzed the Mall Customer dataset to segment customers based on their annual income and spending score. The data was preprocessed using standard scaling, followed by clustering using the K-Means algorithm. The optimal number of clusters was determined using the Elbow Method and set to 5.
+
+Each customer was assigned to a cluster, and the average income and spending behavior per segment was analyzed. We visualized the clusters using 2D scatter plots, which clearly highlighted distinct customer groups. Additionally, DBSCAN was applied as an alternative clustering method to identify density-based clusters.
+
+This project demonstrates the use of unsupervised learning techniques for market segmentation and helps businesses target customer groups more effectively.
